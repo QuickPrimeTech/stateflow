@@ -1,5 +1,7 @@
 import Link from "next/link";
 import { MapPin, Phone, Mail, Clock } from "lucide-react";
+import { SiInstagram, SiTiktok } from "react-icons/si";
+import { FaLinkedin } from "react-icons/fa";
 
 export default function Footer() {
   return (
@@ -74,7 +76,18 @@ export default function Footer() {
           </div>
         </div>
       </div>
-
+      <div className="flex gap-6">
+        <Link href="https://www.linkedin.com/in/state-flow-1b46203b9?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app">
+          <FaLinkedin size={24} className="text-primary mx-2" />
+        </Link>
+        <Link href="https://www.instagram.com/state.flow?igsh=MTJreHE2OGZrdWhtaQ==">
+          {" "}
+          <SiInstagram size={24} className="text-primary mx-2" />
+        </Link>
+        <Link href="https://www.tiktok.com/@stateflow4?_r=1&_t=ZS-94x9p2vyOCQ">
+          <SiTiktok size={24} className="text-primary mx-2" />
+        </Link>
+      </div>
       {/* Copyright */}
       <div className="border-t border-background/10 py-8 text-center text-xs text-background/50">
         <p>

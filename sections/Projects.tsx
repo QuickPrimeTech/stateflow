@@ -107,7 +107,7 @@ export default function Projects() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 gradient-bg text-primary-foreground text-center">
+      <section className="py-20 gradient-bg bg-linear-to-r from-blue-500 to-purple-600 text-primary-foreground text-center">
         <div className="container mx-auto px-4 max-w-2xl">
           <h2 className="text-3xl md:text-4xl font-bold mb-4 text-primary-foreground">
             Have a Project in Mind?

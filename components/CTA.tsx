@@ -6,7 +6,7 @@ import { ArrowRight } from "lucide-react";
 // Fix: Separated 'export default' or used a named export
 const CTA = () => {
   return (
-    <section className="section-padding gradient-bg from-indigo-500 to-purple-600 text-foreground text-center">
+    <section className="section-padding bg-linear-to-r from-blue-500 to-purple-600  text-foreground text-center">
       <div className="container max-w-2xl mx-auto px-4">
         <h2 className="text-3xl md:text-4xl mb-4 text-foreground font-bold">
           Ready to Get Started?

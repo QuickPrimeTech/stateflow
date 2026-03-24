@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import {
   ArrowRight,
@@ -12,25 +13,29 @@ import {
 
 const team = [
   {
-    name: "Alex Mwangi",
+    src: "https://res.cloudinary.com/quick-prime-tech/image/upload/v1749244431/cropped-face_2_iiznfp.jpg",
+    name: "Meshack Kipkemoi",
     role: "Lead Developer & Founder",
-    bio: "Full-stack developer with 7+ years of experience building scalable web applications and mobile apps. Passionate about clean code and great user experiences.",
+    bio: "Full-stack developer with  years of experience building scalable web applications and mobile apps. Passionate about clean code and great user experiences.",
     tags: ["React", "Node.js", "Cloud Architecture", "Project Management"],
   },
   {
-    name: "Grace Wanjiku",
+    src: "https://res.cloudinary.com/meshack-kipkemoi/image/upload/v1774354049/thaithi_wbzqwp.jpg",
+    name: "Lewis Thaithi",
     role: "UI/UX Designer",
     bio: "Creative designer specializing in user-centered design. Transforms complex requirements into intuitive, beautiful interfaces that users love.",
     tags: ["Figma", "User Research", "Prototyping", "Brand Identity"],
   },
   {
-    name: "Brian Ochieng",
+    src: "https://res.cloudinary.com/meshack-kipkemoi/image/upload/v1774353376/solomon_bcycqw.jpg",
+    name: "Solomon Muriithi",
     role: "Mobile App Developer",
     bio: "Expert in cross-platform mobile development. Builds high-performance apps for iOS and Android using React Native and Flutter.",
     tags: ["React Native", "Flutter", "iOS", "Android"],
   },
   {
-    name: "Sarah Kamau",
+    src: "https://res.cloudinary.com/meshack-kipkemoi/image/upload/v1774353427/daniel_wh8x7k.jpg",
+    name: "Daniel Irungu",
     role: "IT Support Specialist",
     bio: "Certified IT professional with expertise in hardware repair, network setup, and system administration. Keeps businesses running smoothly.",
     tags: ["Hardware", "Networking", "System Admin", "Cybersecurity"],
@@ -103,10 +108,13 @@ export default function Team() {
                 key={i}
                 className="bg-card rounded-xl border border-border overflow-hidden hover:shadow-lg hover:border-primary/30 transition-all flex flex-col"
               >
-                <div className="h-56 gradient-bg opacity-20 flex items-center justify-center relative group">
-                  <Users
-                    size={48}
-                    className="text-primary opacity-60 group-hover:scale-110 transition-transform duration-500"
+                <div className="h-56 gradient-bg  flex items-center justify-center relative group">
+                  <Image
+                    src={member.src}
+                    alt="Team Member"
+                    width={400}
+                    height={400}
+                    className=" object-cover h-full w-full  group-hover:scale-105 transition-transform duration-300"
                   />
                   <div className="absolute inset-0 bg-linear-to-t from-background/20 to-transparent" />
                 </div>
@@ -164,7 +172,7 @@ export default function Team() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 gradient-bg text-primary-foreground text-center">
+      <section className="py-20 bg-linear-to-r from-blue-500 to-purple-600  text-primary-foreground text-center">
         <div className="container mx-auto px-4 max-w-2xl">
           <h2 className="text-3xl md:text-4xl font-bold mb-4 text-primary-foreground">
             Want to Join Our Team?

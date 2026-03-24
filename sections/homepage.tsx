@@ -1,5 +1,5 @@
 "use client";
-
+import Image from "next/image";
 import Link from "next/link"; // Changed from react-router-dom
 import { Button } from "@/components/ui/button";
 import {
@@ -58,19 +58,22 @@ const services = [
 
 const projects = [
   {
-    title: "E-Commerce Platform",
+    title: "Bahari Restaurant Website",
     category: "Website Development",
-    desc: "Built a full-featured online store with payment integration, inventory management, and admin dashboard for a growing retail business.",
+    desc: "Built a modern, responsive website for a local restaurant with online ordering and reservation features.",
+    img: "https://res.cloudinary.com/meshack-kipkemoi/image/upload/v1774346040/bahari_ftidqs.png",
   },
   {
-    title: "Delivery Tracking App",
-    category: "App Development",
-    desc: "Developed a real-time delivery tracking application with push notifications, route optimization, and driver management features.",
+    title: "BRIGHTER MINDS CBC",
+    category: "Website Development",
+    desc: "Developed a sleek, user-friendly website for a cutting-edge AI startup, showcasing their products and services.",
+    img: "https://res.cloudinary.com/meshack-kipkemoi/image/upload/v1774346013/lischinese_jcdxgw.png",
   },
   {
-    title: "Corporate IT Infrastructure",
-    category: "Computer Maintenance",
-    desc: "Set up and maintain IT infrastructure for a 50+ employee company including networking, security, and hardware management.",
+    title: "Lis Chinese Restaurant ",
+    category: "Website Development",
+    desc: "Built a modern, responsive website for a Chinese restaurant with online ordering and reservation features.",
+    img: "https://res.cloudinary.com/meshack-kipkemoi/image/upload/v1774346013/lischinese_jcdxgw.png",
   },
 ];
 
@@ -154,7 +157,7 @@ const Index = () => {
               <div className="space-y-3 mb-8">
                 {benefits.map((b, i) => (
                   <div key={i} className="flex items-center gap-3 text-sm">
-                    <b.icon size={18} className="text-primary flex-shrink-0" />
+                    <b.icon size={18} className="text-primary shrink-0" />
                     <span>{b.text}</span>
                   </div>
                 ))}
@@ -172,7 +175,7 @@ const Index = () => {
             </div>
 
             <div className="hidden lg:block">
-              <div className="relative rounded-2xl overflow-hidden gradient-bg p-[2px]">
+              <div className="relative rounded-2xl overflow-hidden gradient-bg p-0.5">
                 <div className="bg-card rounded-2xl p-8 text-center">
                   <Code2
                     size={80}
@@ -219,16 +222,24 @@ const Index = () => {
             {projects.map((p, i) => (
               <div
                 key={i}
-                className="group bg-card rounded-xl border border-border p-6 hover:shadow-xl hover:border-primary/30 transition-all duration-300"
+                className="group bg-card rounded-xl border border-border  hover:shadow-xl hover:border-primary/30 transition-all duration-300"
               >
-                <div className="h-48 rounded-lg gradient-bg opacity-20 mb-4 flex items-center justify-center">
-                  <Code2 size={48} className="text-primary opacity-60" />
+                <div className="h-48 rounded-lg gradient-bg  mb-4 flex items-center justify-center">
+                  <Image
+                    src={p.img}
+                    alt={p.title}
+                    width={400}
+                    height={300}
+                    className="text-primary"
+                  />
                 </div>
-                <span className="inline-block text-xs font-medium text-primary bg-primary/10 rounded-full px-3 py-1 mb-3">
+                <span className="inline-block text-xs font-medium text-primary bg-primary/10 rounded-full px-6 py-1 mb-3">
                   {p.category}
                 </span>
-                <h3 className="text-xl mb-2 font-bold">{p.title}</h3>
-                <p className="text-muted-foreground text-sm mb-4">{p.desc}</p>
+                <h3 className="text-xl mb-2 p-6 font-bold">{p.title}</h3>
+                <p className="text-muted-foreground text-sm p-6 mb-4">
+                  {p.desc}
+                </p>
                 <Button
                   variant="outline"
                   size="sm"
@@ -361,7 +372,7 @@ const Index = () => {
                     <li key={f} className="flex items-center gap-2 text-sm">
                       <CheckCircle2
                         size={16}
-                        className="text-primary flex-shrink-0"
+                        className="text-primary shrink-0"
                       />
                       {f}
                     </li>
@@ -442,12 +453,12 @@ const Index = () => {
       </section>
 
       {/* CTA */}
-      <section className="py-20 gradient-bg text-primary-foreground text-center">
+      <section className="py-20  bg-linear-to-r from-blue-500 to-purple-600 text-foreground text-center">
         <div className="container max-w-2xl mx-auto px-4">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
             Let's Build Something Amazing Together
           </h2>
-          <p className="mb-8 text-primary-foreground/80">
+          <p className="mb-8 text-foreground/80">
             Ready to transform your business with technology? Let's start with a
             free consultation.
           </p>
