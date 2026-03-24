@@ -65,7 +65,7 @@ export default function Footer() {
               <Phone size={18} className="text-primary" /> +254 700 000 000
             </span>
             <span className="flex items-center gap-3">
-              <Mail size={18} className="text-primary" /> hello@stateflow.co.ke
+              <Mail size={18} className="text-primary" /> statef146@gmail.com
             </span>
             <span className="flex items-center gap-3">
               <Clock size={18} className="text-primary" /> Mon–Fri: 8:00 AM –

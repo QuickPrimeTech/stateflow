@@ -47,7 +47,7 @@ export default function Contact() {
               </p>
               <p className="flex items-start gap-3">
                 <Mail className="text-accent mt-1 shrink-0" size={20} />
-                hello@kitchensdelight.co.ke
+                statef146@gmail.com
               </p>
               <p className="flex items-start gap-3">
                 <Clock className="text-accent mt-1 shrink-0" size={20} />
