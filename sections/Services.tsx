@@ -185,7 +185,7 @@ const Services = () => {
                       <div key={i} className="flex items-start gap-3">
                         <f.icon
                           size={20}
-                          className="text-primary flex-shrink-0 mt-0.5"
+                          className="text-primary shrink-0 mt-0.5"
                         />
                         <div>
                           <p className="text-sm font-medium">{f.text}</p>
@@ -208,7 +208,7 @@ const Services = () => {
                   </div>
                 </div>
                 <div className={idx % 2 === 1 ? "lg:order-1" : ""}>
-                  <div className="rounded-2xl overflow-hidden gradient-bg p-[2px]">
+                  <div className="rounded-2xl overflow-hidden gradient-bg p-0.5">
                     <div className="bg-card rounded-2xl p-12 flex items-center justify-center">
                       <service.icon
                         size={120}

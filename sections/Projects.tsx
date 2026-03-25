@@ -1,43 +1,25 @@
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { ExternalLink, Code2, ArrowRight } from "lucide-react";
-
+import Image from "next/image";
 const projects = [
   {
-    title: "Savannah E-Commerce",
+    title: "Bahari Restaurant Website",
     category: "Website Development",
-    subtitle: "Full-featured online retail platform",
-    desc: "Built a modern e-commerce platform with payment integration via M-Pesa and card payments, real-time inventory tracking, and a comprehensive admin dashboard.",
+    desc: "Built a modern, responsive website for a local restaurant with online ordering and reservation features.",
+    img: "https://res.cloudinary.com/meshack-kipkemoi/image/upload/v1774346040/bahari_ftidqs.png",
   },
   {
-    title: "SwiftDeliver App",
-    category: "App Development",
-    subtitle: "Real-time delivery tracking",
-    desc: "Developed a cross-platform delivery tracking app with push notifications, live GPS tracking, route optimization, and driver management for a logistics startup.",
-  },
-  {
-    title: "TechHub Office Solutions",
-    category: "Computer Maintenance",
-    subtitle: "Enterprise IT infrastructure",
-    desc: "Set up and maintained complete IT infrastructure for a 100+ employee office including networking, security systems, cloud backup, and hardware lifecycle management.",
-  },
-  {
-    title: "FarmConnect Platform",
+    title: "BRIGHTER MINDS CBC",
     category: "Website Development",
-    subtitle: "Agricultural marketplace",
-    desc: "Created a digital marketplace connecting farmers directly with buyers, featuring real-time pricing, logistics coordination, and mobile-responsive design.",
+    desc: "Developed a sleek, user-friendly website for a cutting-edge AI startup, showcasing their products and services.",
+    img: "https://res.cloudinary.com/meshack-kipkemoi/image/upload/v1774346013/lischinese_jcdxgw.png",
   },
   {
-    title: "HealthTrack Pro",
-    category: "App Development",
-    subtitle: "Healthcare management system",
-    desc: "Built a comprehensive healthcare app for patient record management, appointment scheduling, and telemedicine consultations with HIPAA-compliant data handling.",
-  },
-  {
-    title: "SchoolNet IT Setup",
-    category: "Computer Maintenance",
-    subtitle: "Educational institution IT support",
-    desc: "Deployed and maintained a computer lab with 200+ workstations, centralized server management, content filtering, and ongoing technical support for a Nairobi school.",
+    title: "Lis Chinese Restaurant ",
+    category: "Website Development",
+    desc: "Built a modern, responsive website for a Chinese restaurant with online ordering and reservation features.",
+    img: "https://res.cloudinary.com/meshack-kipkemoi/image/upload/v1774346013/lischinese_jcdxgw.png",
   },
 ];
 
@@ -76,8 +58,14 @@ export default function Projects() {
                 className="group bg-card rounded-xl border border-border overflow-hidden hover:shadow-xl hover:border-primary/30 transition-all duration-300"
               >
                 {/* Visual Placeholder */}
-                <div className="h-52 gradient-bg opacity-20 flex items-center justify-center group-hover:opacity-30 transition-opacity">
-                  <Code2 size={48} className="text-primary opacity-60" />
+                <div className="h-52 gradient-bg  flex items-center justify-center ">
+                  <Image
+                    src={p.img}
+                    alt={p.title}
+                    width={400}
+                    height={400}
+                    className="text-primary "
+                  />
                 </div>
 
                 {/* Content */}
@@ -86,12 +74,11 @@ export default function Projects() {
                     {p.category}
                   </span>
                   <h3 className="text-xl font-bold mb-1">{p.title}</h3>
-                  <p className="text-sm font-medium text-muted-foreground mb-3">
-                    {p.subtitle}
-                  </p>
+
                   <p className="text-sm text-muted-foreground mb-4 line-clamp-3">
                     {p.desc}
                   </p>
+
                   <Button
                     variant="outline"
                     size="sm"

@@ -240,13 +240,15 @@ const Index = () => {
                 <p className="text-muted-foreground text-sm p-6 mb-4">
                   {p.desc}
                 </p>
-                <Button
-                  variant="outline"
-                  size="sm"
-                  className="gap-2 group-hover:border-primary group-hover:text-primary transition-colors"
-                >
-                  View Details <ExternalLink size={12} />
-                </Button>
+                <Link href="/projects" className="p-6 block">
+                  <Button
+                    variant="outline"
+                    size="sm"
+                    className="gap-2 group-hover:border-primary group-hover:text-primary transition-colors"
+                  >
+                    View Details <ExternalLink size={12} />
+                  </Button>
+                </Link>
               </div>
             ))}
           </div>
